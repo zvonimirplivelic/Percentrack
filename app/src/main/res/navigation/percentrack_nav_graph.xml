@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:app="http://schemas.android.com/apk/res-auto"
-             android:id="@+id/percentrack_nav_graph">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/percentrack_nav_graph"
+    app:startDestination="@id/exerciseListFragment">
 
+    <fragment
+        android:id="@+id/exerciseListFragment"
+        android:name="com.zvonimirplivelic.percentrack.ui.ExerciseListFragment"
+        android:label="fragment_exercise_list"
+        tools:layout="@layout/fragment_exercise_list">
+        <action
+            android:id="@+id/action_exerciseListFragment_to_addExerciseFragment"
+            app:destination="@id/addExerciseFragment" />
+        <action
+            android:id="@+id/action_exerciseListFragment_to_exerciseInfoFragment"
+            app:destination="@id/exerciseInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addExerciseFragment"
+        android:name="com.zvonimirplivelic.percentrack.ui.AddExerciseFragment"
+        android:label="fragment_add_exercise"
+        tools:layout="@layout/fragment_add_exercise" />
+    <fragment
+        android:id="@+id/exerciseInfoFragment"
+        android:name="com.zvonimirplivelic.percentrack.ui.ExerciseInfoFragment"
+        android:label="fragment_exercise_info"
+        tools:layout="@layout/fragment_exercise_info">
+        <argument
+            android:name="exercise"
+            app:argType="com.zvonimirplivelic.percentrack.model.Exercise" />
+
+    </fragment>
 </navigation>

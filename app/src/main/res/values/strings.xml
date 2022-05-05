@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Percentrack</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_exercise_button_description">Add exercise button</string>
+    <string name="exercise_name_hint">Exercise name</string>
+    <string name="one_rm_hint">Weight of 1RM</string>
+    <string name="add_exercise_button_text">Add exercise</string>
 </resources>
