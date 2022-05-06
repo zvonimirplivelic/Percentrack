@@ -16,7 +16,7 @@ class PercentrackRepository(private val percentrackDao: PercentrackDao) {
         percentrackDao.updateExercise(exercise)
     }
 
-    suspend fun deleteExercise(exercise: Exercise) {
-
+    suspend fun deleteExercise(id: Int) {
+        percentrackDao.deleteExercise(id)
     }
 }

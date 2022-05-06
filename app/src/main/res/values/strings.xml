@@ -6,4 +6,5 @@
     <string name="exercise_name_hint">Exercise name</string>
     <string name="one_rm_hint">Weight of 1RM</string>
     <string name="add_exercise_button_text">Add exercise</string>
+    <string name="exercise_list_pr_string">%d%%</string>
 </resources>

@@ -11,6 +11,6 @@ data class Exercise(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
     val name: String,
-    val prDate: Long,
-    val prWeight: Double
+    val prDate: Long?,
+    val prWeight: Double?
 ): Parcelable

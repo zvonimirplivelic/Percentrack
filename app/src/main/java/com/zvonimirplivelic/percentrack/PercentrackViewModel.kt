@@ -32,9 +32,9 @@ class PercentrackViewModel(application: Application) : AndroidViewModel(applicat
         }
     }
 
-    fun deleteExercise(exercise: Exercise) {
+    fun deleteExercise(id: Int) {
         viewModelScope.launch(Dispatchers.IO) {
-            repository.deleteExercise(exercise)
+            repository.deleteExercise(id)
         }
     }
 }

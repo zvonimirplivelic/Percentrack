@@ -21,7 +21,11 @@
         android:id="@+id/addExerciseFragment"
         android:name="com.zvonimirplivelic.percentrack.ui.AddExerciseFragment"
         android:label="fragment_add_exercise"
-        tools:layout="@layout/fragment_add_exercise" />
+        tools:layout="@layout/fragment_add_exercise" >
+        <action
+            android:id="@+id/action_addExerciseFragment_to_exerciseListFragment"
+            app:destination="@id/exerciseListFragment" />
+    </fragment>
     <fragment
         android:id="@+id/exerciseInfoFragment"
         android:name="com.zvonimirplivelic.percentrack.ui.ExerciseInfoFragment"
@@ -30,6 +34,9 @@
         <argument
             android:name="exercise"
             app:argType="com.zvonimirplivelic.percentrack.model.Exercise" />
+        <action
+            android:id="@+id/action_exerciseInfoFragment_to_exerciseListFragment"
+            app:destination="@id/exerciseListFragment" />
 
     </fragment>
 </navigation>
