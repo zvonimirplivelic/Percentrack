@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.zvonimirplivelic.percentrack.R
 import com.zvonimirplivelic.percentrack.model.Exercise
@@ -36,6 +37,16 @@ class PercentrackListAdapter() : RecyclerView.Adapter<PercentrackListAdapter.Exe
             tvExerciseName.text = exercise.name
             tvExercisePr.text = exercise.prWeight.toString()
             tvExercisePrDate.text = exercise.prDate.toString()
+
+            setOnClickListener {
+                val action =
+                    ExerciseListFragmentDirections
+                        .actionExerciseListFragmentToExerciseInfoFragment(
+                            exercise
+                        )
+                findNavController().navigate(action)
+            }
+
         }
     }
 
