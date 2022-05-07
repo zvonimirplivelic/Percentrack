@@ -51,7 +51,7 @@
         android:layout_margin="16dp"
         android:textStyle="italic"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/til_update_exercise_pr"/>
+        app:layout_constraintTop_toBottomOf="@id/til_update_exercise_pr" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_update_exercise"
@@ -63,5 +63,302 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/btn_update_exercise"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_exercise_pr_updated_date">
+
+        <TableRow android:background="@color/design_default_color_secondary_variant">
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="Percentage" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="Reps" />
+
+            <TextView
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="Weight(kg)" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="100%" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/tv_100_percent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/weight_in_percentage_string" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="95%" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="2" />
+
+            <TextView
+                android:id="@+id/tv_95_percent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/weight_in_percentage_string" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="93%" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="3" />
+
+            <TextView
+                android:id="@+id/tv_93_percent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/weight_in_percentage_string" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="90%" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="4" />
+
+            <TextView
+                android:id="@+id/tv_90_percent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/weight_in_percentage_string" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="87%" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="5" />
+
+            <TextView
+                android:id="@+id/tv_87_percent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/weight_in_percentage_string" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="85%" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="6" />
+
+            <TextView
+                android:id="@+id/tv_85_percent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/weight_in_percentage_string" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="83%" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="7" />
+
+            <TextView
+                android:id="@+id/tv_83_percent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/weight_in_percentage_string" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="80%" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="8" />
+
+            <TextView
+                android:id="@+id/tv_80_percent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/weight_in_percentage_string" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="77%" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="9" />
+
+            <TextView
+                android:id="@+id/tv_77_percent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/weight_in_percentage_string" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="75%" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="10" />
+
+            <TextView
+                android:id="@+id/tv_75_percent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/weight_in_percentage_string" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="70%" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="11" />
+
+            <TextView
+                android:id="@+id/tv_70_percent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/weight_in_percentage_string" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="67%" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="12" />
+
+            <TextView
+                android:id="@+id/tv_67_percent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/weight_in_percentage_string" />
+        </TableRow>
+    </TableLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

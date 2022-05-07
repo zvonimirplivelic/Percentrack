@@ -76,7 +76,6 @@ class AddExerciseFragment : Fragment() {
         }
     }
 
-
     private fun validateUserInput(
         exerciseName: String,
     ): Boolean {
