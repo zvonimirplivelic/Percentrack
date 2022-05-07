@@ -45,20 +45,21 @@ class AddExerciseFragment : Fragment() {
 
     private fun addExerciseToDatabase() {
         val exerciseName = tilExerciseName.editText?.text.toString()
-        val exercisePr = tilExercisePr.editText?.text.toString()
-
-        val exerciseDate = if (tilExercisePr.editText?.text.isNullOrEmpty()) {
-            null
-        } else {
-            Calendar.getInstance().timeInMillis
-        }
-
+        var exercisePr = tilExercisePr.editText?.text?.toString()?.toDoubleOrNull()
+        var exerciseDate = 0L
         if (validateUserInput(exerciseName)) {
+            if (tilExercisePr.editText?.text.isNullOrEmpty()) {
+                exercisePr = 0.0
+                exerciseDate = 0L
+            } else {
+                Calendar.getInstance().timeInMillis
+            }
+
             val exercise = Exercise(
                 0,
                 exerciseName,
                 exerciseDate,
-                exercisePr.toDouble()
+                exercisePr
             )
 
             viewModel.addExercise(exercise)

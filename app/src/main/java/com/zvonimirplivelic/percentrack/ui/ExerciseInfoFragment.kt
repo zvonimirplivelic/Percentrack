@@ -81,83 +81,86 @@ class ExerciseInfoFragment : Fragment() {
         tvSeventyPct = view.findViewById(R.id.tv_70_percent)
         tvSixtySevenPct = view.findViewById(R.id.tv_67_percent)
 
+        tvUpdateExerciseName.text = args.exercise.name
+        if (args.exercise.prWeight == null) {
+            tilUpdateExercisePr.editText?.setText((0.0).toString())
+        } else {
+            tilUpdateExercisePr.editText?.setText(args.exercise.prWeight.toString())
+        }
+        tvUpdatedPrDate.text = args.exercise.prDate.toString()
+
         tvHundredPct.text = resources.getString(
             R.string.weight_in_percentage_string,
             convertPrWeightToString(HUNDRED_PERCENT)
         )
-
         tvNinetyFivePct.text = resources.getString(
             R.string.weight_in_percentage_string,
             convertPrWeightToString(NINETY_FIVE_PERCENT)
         )
-
         tvNinetyThreePct.text = resources.getString(
             R.string.weight_in_percentage_string,
             convertPrWeightToString(NINETY_THREE_PERCENT)
         )
-
         tvNinetyPct.text = resources.getString(
             R.string.weight_in_percentage_string,
             convertPrWeightToString(NINETY_PERCENT)
         )
-
         tvEightySevenPct.text = resources.getString(
             R.string.weight_in_percentage_string,
             convertPrWeightToString(EIGHTY_SEVEN_PERCENT)
         )
-
         tvEightyFivePct.text = resources.getString(
             R.string.weight_in_percentage_string,
             convertPrWeightToString(EIGHTY_FIVE_PERCENT)
         )
-
         tvEightyThreePct.text = resources.getString(
             R.string.weight_in_percentage_string,
             convertPrWeightToString(EIGHTY_THREE_PERCENT)
         )
-
         tvEightyPct.text = resources.getString(
             R.string.weight_in_percentage_string,
             convertPrWeightToString(EIGHTY_PERCENT)
         )
-
         tvSeventySevenPct.text = resources.getString(
             R.string.weight_in_percentage_string,
             convertPrWeightToString(SEVENTY_SEVEN_PERCENT)
         )
-
         tvSeventyFivePct.text = resources.getString(
             R.string.weight_in_percentage_string,
             convertPrWeightToString(SEVENTY_FIVE_PERCENT)
         )
-
         tvSeventyPct.text = resources.getString(
             R.string.weight_in_percentage_string,
             convertPrWeightToString(SEVENTY_PERCENT)
         )
-
         tvSixtySevenPct.text = resources.getString(
             R.string.weight_in_percentage_string,
             convertPrWeightToString(SIXTY_SEVEN_PERCENT)
         )
-
-        tvUpdateExerciseName.text = args.exercise.name
-        tilUpdateExercisePr.editText?.setText(args.exercise.prWeight.toString())
-        tvUpdatedPrDate.text = args.exercise.prDate.toString()
 
         ibUpdateExerciseName.setOnClickListener {
 
         }
 
         btnUpdateExercise.setOnClickListener {
-            viewModel.updateExercise(
-                Exercise(
-                    args.exercise.id,
-                    tvUpdateExerciseName.text.toString(),
-                    Calendar.getInstance().timeInMillis,
-                    tilUpdateExercisePr.editText?.text.toString().toDouble()
+            val exerciseName = tvUpdateExerciseName.text.toString()
+            val exercisePr: Double? =
+                tilUpdateExercisePr.editText?.text?.toString()?.toDoubleOrNull()
+            var exerciseDate: Long?
+
+            if (exercisePr!! > args.exercise.prWeight!!) {
+                exerciseDate = Calendar.getInstance().timeInMillis
+                viewModel.updateExercise(
+                    Exercise(
+                        args.exercise.id,
+                        exerciseName,
+                        exerciseDate,
+                        exercisePr
+                    )
                 )
-            )
+            }
+
+
             findNavController().navigate(R.id.action_exerciseInfoFragment_to_exerciseListFragment)
         }
 
