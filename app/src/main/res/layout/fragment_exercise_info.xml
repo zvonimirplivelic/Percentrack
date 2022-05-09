@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ExerciseInfoFragment">
+
+    <TextView
+        android:id="@+id/tv_update_exercise_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/ib_update_exercise_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_edit"
+        app:layout_constraintBottom_toBottomOf="@id/tv_update_exercise_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_update_exercise_name" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_update_exercise_pr"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="@string/one_rm_hint"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_update_exercise_name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_exercise_pr_updated_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textStyle="italic"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_update_exercise_pr" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_update_exercise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:text="Save exercise data"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/btn_update_exercise"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_exercise_pr_updated_date">
+
+        <TableRow android:background="@color/dark">
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="Percentage" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="Reps" />
+
+            <TextView
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="Weight(kg)" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="100%" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="1" />
+
+            <TextView
+                android:id="@+id/tv_100_percent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/weight_in_percentage_string" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="95%" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="2" />
+
+            <TextView
+                android:id="@+id/tv_95_percent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/weight_in_percentage_string" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="93%" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="3" />
+
+            <TextView
+                android:id="@+id/tv_93_percent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/weight_in_percentage_string" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="90%" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="4" />
+
+            <TextView
+                android:id="@+id/tv_90_percent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/weight_in_percentage_string" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="87%" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="5" />
+
+            <TextView
+                android:id="@+id/tv_87_percent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/weight_in_percentage_string" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="85%" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="6" />
+
+            <TextView
+                android:id="@+id/tv_85_percent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/weight_in_percentage_string" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="83%" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="7" />
+
+            <TextView
+                android:id="@+id/tv_83_percent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/weight_in_percentage_string" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="80%" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="8" />
+
+            <TextView
+                android:id="@+id/tv_80_percent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/weight_in_percentage_string" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="77%" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="9" />
+
+            <TextView
+                android:id="@+id/tv_77_percent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/weight_in_percentage_string" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="75%" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="10" />
+
+            <TextView
+                android:id="@+id/tv_75_percent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/weight_in_percentage_string" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="70%" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="11" />
+
+            <TextView
+                android:id="@+id/tv_70_percent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/weight_in_percentage_string" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="67%" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="12" />
+
+            <TextView
+                android:id="@+id/tv_67_percent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="@string/weight_in_percentage_string" />
+        </TableRow>
+    </TableLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
